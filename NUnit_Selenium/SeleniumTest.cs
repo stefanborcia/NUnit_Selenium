@@ -21,7 +21,11 @@ namespace NUnit_Selenium
             // Methods -get_url, click
             // Call WebDriverManager
             new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig()); 
-            driver = new ChromeDriver(); 
+            driver = new ChromeDriver();
+            // driver = new FirefoxDriver();   geckodriver . FirefoxConfig();  - to run on Firefox 
+            // driver = new EdgeDriver(); edgedriver.exe , EdgeConfig(); - to run on Edge
+
+            driver.Manage().Window.Maximize(); // This will make the windows maximize.
         }
 
         [Test]
