@@ -28,6 +28,10 @@ namespace NUnit_Selenium
         public void Test1()
         {
             driver.Url = "https://github.com/stefanborcia";
+            TestContext.Progress.WriteLine(driver.Title);
+            TestContext.Progress.WriteLine(driver.Url);
+            driver.Close(); // Close 1 window
+          //  driver.Quit(); = Close all windows
         }
     }
 }
